@@ -1,1 +1,137 @@
 // bu yerda sitenav bor
+.sitenav {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item + &__item {
+    margin-left: 33px;
+  }
+
+  &__link {
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #4F5665;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 768px){
+  .sitenav {
+
+    &__item + &__item {
+      margin-left: 13px;
+    }
+
+    &__link {
+      font-size: 14px;
+      line-height: 15px;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 990px){
+
+  .sitenav {
+
+    &__item + &__item {
+      margin-left: 16px;
+    }
+
+    &__link {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+  }
+}
+
+
+@media only screen and (max-width: 765px){
+
+  .sitenav {
+    display: none;
+
+    &__item + &__item {
+      margin-left: 0px;
+      margin-top: 15px;
+    }
+
+    &__link {
+      font-size: 17px;
+      line-height: 19px;
+      font-weight: 600;
+      color: rgb(0, 0, 0);
+    }
+  }
+
+  .header {
+    padding-top: 30px;
+    position: relative;
+
+    &__btn {
+      margin: 0;
+      margin-top: 20px;
+      max-width: 150px;
+      font-weight: 500;
+      background-color: white;
+    }
+  }
+
+  .header__hamburger {
+    display: inline-block;
+  }
+
+  .header--open .sitenav {
+    padding-top: 200px;
+    padding-bottom: 260px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: rgb(255,160,160);
+    background: linear-gradient(47deg, rgba(255,160,160,1) 11%, rgba(100,217,255,1) 44%, rgba(1,255,185,1) 92%);
+    top: -100%;
+    width: 50%;
+    right: 0%;
+  }
+
+  .header--open .sitenav__list {
+    flex-direction: column;
+  }
+
+  .header--open .header__hamburger {
+    background-image: url(../images/xmark-solid.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 99;
+  }
+
+  .header--open .header__bg {
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    width: 50%;
+    height: 565px;
+    left: 0;
+    background-color: #000;
+    opacity: 0.7;
+  }
+}

@@ -4,21 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./images/favicon.jfif" type="image/x-icon">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Document</title>
+    <title>Pennovate</title>
 </head>
 <body>
+
     <!-- HEADER -->
     <header class="header">
+        <div class="container header__container">
+            <a class="logo__link text-decoration-none" href="#">
+                <img src="./images/logo.svg" alt="logo" width="112" height="30">
+            </a>
 
+            <nav class="sitenav">
+                <ul class="sitenav__list">
+                    <li class="sitenav__item">
+                        <a class="sitenav__link text-decoration-none" href="#">About Us</a>
+                    </li>
+
+                    <li class="sitenav__item">
+                        <a class="sitenav__link text-decoration-none" href="#">Contact Us</a>
+                    </li>
+
+                    <li class="sitenav__item">
+                        <a class="sitenav__link text-decoration-none" href="#">Service Breakdown</a>
+                    </li>
+
+                    <li class="sitenav__item">
+                        <a class="sitenav__link text-decoration-none" href="#">Help</a>
+                    </li>
+                </ul>
+                <a class="header__btn">Claim your free session</a>
+            </nav>
+
+
+            <button class="header__hamburger"></button>
+            <div class="header__bg"></div>
+        </div>
     </header>
     <!-- MAIN -->
     <main class="main">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero__container">
+                <h1 class="hero__heading">
+                    3 INSANELY easy steps to earn up to
+                    18.7 lacs per year while studying in UK
+                </h1>
+                <p class="hero__desc">
+                    (even without work experience, IELTS or TOFEL)
+                </p>
 
+                <form class="hero__form" action="https://echo.htmlacademy.ru/" method="post">
+                    <h3 class="hero__form__heading">
+                        JOIN THE FREE PROGRAM
+                    </h3>
+
+                    <p class="hero__form__desc">
+                        Today’s class starting in:
+                    </p>
+
+                    <span class="hero__form__hour">0 0:0 8:3 7</span>
+                    <span class="hero__form__hour-text">Hours Minutes Seconds</span>
+
+                    <div class="hero__form-input-wrapper d-flex flex-column">
+                        <label class="hero__form-lebel" for="user__name">Name</label>
+                        <input class="hero__form-input" type="text" placeholder="Sumanya" id="user__name" name="user__name" required autocomplete="off">
+                    </div>
+
+                    <div class="hero__form-input-wrapper-second d-flex flex-column">
+                        <label class="hero__form-lebel" for="user__email">Email</label>
+                        <input class="hero__form-input" type="email" placeholder="sumanyakghjf@gmail.com" id="user__email" name="user__email" required autocomplete="off">
+                    </div>
+
+                    <button class="hero__form-btn btn" href="#">
+                        JOIN THE FREE TRAINING
+                    </button>
+                </form>
+            </div>
+        </section>
+        <!-- FINANCE -->
+        <section class="finance">
+            <div class="container">
+                <h2 class="finance__heading">
+                    Don’t let finances be a barrier to your dreams.
+                </h2>
+
+                <img src="./images/finance.png" alt="univercity" width="1188" height="134">
+            </div>
+        </section>
     </main>
     <!-- FOOTER -->
     <footer class="footer">
 
     </footer>
+
+    <script src="./js/apps.js"></script>
 </body>
 </html>
